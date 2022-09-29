@@ -1,5 +1,8 @@
+/* eslint-disable prefer-rest-params */
+/* eslint-disable no-useless-escape */
 // Credits to Akram Khalid
 import React, { useEffect, useRef, useCallback } from 'react'
+
 import useWindowSize from './useWindowSize'
 let __assign =
   (this && this.__assign) ||

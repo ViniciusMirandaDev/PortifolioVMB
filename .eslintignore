@@ -1,3 +1,4 @@
 node_modules
 .next
 /*.js
+/lib/react-smooth-scrooling/*
