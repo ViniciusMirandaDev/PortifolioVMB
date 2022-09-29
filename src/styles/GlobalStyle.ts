@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
 import { rgba } from 'polished'
+import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
   * {
@@ -9,14 +9,13 @@ export default createGlobalStyle`
     transition: background-color 0.2s linear;
   }
   html, body, #__next {
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth; 
+    overflow-x: hidden;
     width: 100vw;
     max-height: 100vh;
-
     background: ${props => props.theme.colors.background.dark};
     color: ${props => props.theme.colors.text.normal};
-
-    font-family: Roboto, sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
   }
 
   @media (max-width: 1080px){

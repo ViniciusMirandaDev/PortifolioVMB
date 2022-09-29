@@ -1,8 +1,7 @@
 import { AppProps } from 'next/app'
 
-import GlobalAnimations from '@/components/GlobalAnimations'
-
 import Context from '@/contexts'
+import Header from '@/components/Header'
 
 export default function App({
   Component: SsrComponent,
@@ -10,9 +9,7 @@ export default function App({
 }: AppProps) {
   return (
     <Context>
-      <GlobalAnimations>
-        <SsrComponent {...ssrPageProps} />
-      </GlobalAnimations>
+      <SsrComponent {...ssrPageProps} />
     </Context>
   )
 }

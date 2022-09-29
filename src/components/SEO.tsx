@@ -66,8 +66,8 @@ export default function SEO({
 
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@solrachix" />
-      <meta name="twitter:creator" content="@solrachix" />
+      <meta name="twitter:site" content="@_viniciusbap" />
+      <meta name="twitter:creator" content="@_viniciusbap" />
       <meta name="twitter:image" content={pageImage} />
       <meta name="twitter:image:src" content={pageImage} />
       <meta name="twitter:image:alt" content="Thumbnail" />

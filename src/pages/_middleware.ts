@@ -1,6 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { verifyAuth } from '@/utils/verifyJWT'
 import { USER_TOKEN, Routes } from '@/configs'
+import { verifyAuth } from '@/utils/verifyJWT'
+
+import { NextRequest, NextResponse } from 'next/server'
 
 export async function middleware(req: NextRequest) {
   // Add the user token to the response
@@ -9,7 +10,7 @@ export async function middleware(req: NextRequest) {
   const page = Routes.find(route => route.path === req.page.name)
 
   if (!payload && (page?.secure || page === undefined)) {
-    url.pathname = '/login'
+    url.pathname = '/'
     page !== undefined && url.searchParams.set('RedirectedTo', req.page.name)
 
     return NextResponse.redirect(url)

@@ -4,8 +4,16 @@ export const Routes = [
     secure: false
   },
   {
-    path: '/teste',
-    secure: true
+    path: '/tech',
+    secure: false
+  },
+  {
+    path: '/about',
+    secure: false
+  },
+  {
+    path: '/career',
+    secure: false
   },
   {
     path: '/login',
