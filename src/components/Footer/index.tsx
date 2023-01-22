@@ -1,13 +1,12 @@
-import React from 'react'
-
-import { NootebokIcon, PhoneIcon } from '@/assets/icons'
+import { FooterLogoIcon, NotebokIcon, PhoneIcon } from '@/assets/icons'
 
 import { Container } from './styles'
 const Footer: React.FC = () => {
   return (
     <Container>
       <PhoneIcon />
-      <NootebokIcon />
+      <FooterLogoIcon></FooterLogoIcon>
+      <NotebokIcon />
     </Container>
   )
 }

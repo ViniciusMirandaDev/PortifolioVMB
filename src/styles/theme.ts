@@ -36,7 +36,7 @@ export const LightTheme = {
     green: '#04d361',
     orange: '#fd951f',
     pink: '#FF79C6',
-    blue: '#2436e8',
+    blue: '#00AFEF',
     red: '#ce4a4a',
     yellow: '#ffcd1e'
   }

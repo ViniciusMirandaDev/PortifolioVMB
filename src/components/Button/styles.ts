@@ -85,11 +85,14 @@ export const Container = styled.button<ButtonProps>`
         `
       case 'blue':
         return css`
-          border: 1px solid ${props => props.theme.colors.green};
-          font-family: 'Arial', sans-serif;
-          background: transparent;
-          font-weight: 400;
-          color: ${props => props.theme.colors.green};
+          background: ${props.theme.colors.blue};
+          &:hover,
+          &:focus {
+            transform: scale(1.05);
+            border: 2px solid ${props.theme.colors.blue};
+            color: ${props.theme.colors.white};
+            background: none;
+          }
         `
     }
   }};
