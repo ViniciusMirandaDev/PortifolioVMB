@@ -37,11 +37,7 @@ export default function Home() {
       />
       <Content>
         <TopContent>
-          <Left
-            data-aos="fade-up"
-            data-aos-delay="300"
-            data-aos-easing="ease-in-back"
-          >
+          <Left>
             <h2>
               <i>Hello World</i>, tudo bem?
             </h2>
@@ -71,11 +67,7 @@ export default function Home() {
               </Button>
             </div>
           </Left>
-          <Right
-            data-aos="fade-up"
-            data-aos-delay="300"
-            data-aos-easing="ease-in"
-          >
+          <Right>
             <ProfileLogoIcon />
           </Right>
         </TopContent>
