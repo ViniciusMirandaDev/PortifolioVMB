@@ -18,6 +18,7 @@ export default createGlobalStyle`
     font-family: 'Poppins', sans-serif !important;
   }
 
+
   @media (max-width: 1080px){
     html {
       font-size: 93.75%;

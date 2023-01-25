@@ -21,6 +21,11 @@ export const TopContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 `
 export const Left = styled.article`
   display: flex;
@@ -28,6 +33,19 @@ export const Left = styled.article`
   gap: 0.55rem;
   max-width: 50%;
 
+  @media only screen and (max-width: 1000px) {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  @media only screen and (max-width: 550px) {
+    > div {
+      margin-top: 2rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
   > h2 {
     font-weight: 600;
     font-size: 2rem;
@@ -54,6 +72,15 @@ export const Left = styled.article`
 export const Right = styled.figure`
   max-width: 50%;
 
+  @media only screen and (max-width: 1000px) {
+    max-width: 100%;
+  }
+  @media only screen and (max-width: 600px) {
+    > svg {
+      height: 100%;
+    }
+  }
+
   @keyframes float {
     0% {
       transform: translatey(0px);
@@ -70,7 +97,7 @@ export const Right = styled.figure`
 
   > svg {
     width: 100%;
-    height: 30rem;
+    height: 30rem !important;
     animation: float 4s ease-in-out infinite;
   }
 `
@@ -81,9 +108,10 @@ export const BasicInfos = styled.article`
   padding: 4.375rem 0;
   align-items: center;
   gap: 5rem;
-  height: 25rem;
+  height: fit-content;
   position: relative;
   width: 100vw;
+
   h3 {
     font-weight: 600;
     font-size: 2rem;
@@ -98,9 +126,16 @@ export const BasicInfos = styled.article`
     z-index: -1;
   }
   div {
-    width: 65vw;
+    width: 60%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @media only screen and (max-width: 1000px) {
+      width: 75%;
+      justify-content: center;
+    }
   }
 `
 
@@ -116,7 +151,8 @@ export const Card = styled.div`
   align-items: center;
   border-radius: 20px;
   max-width: 12.5rem;
-  height: 10rem;
+  height: 11.5rem;
+
   position: relative;
 
   p {
@@ -125,6 +161,11 @@ export const Card = styled.div`
     color: rgba(255, 255, 255, 0.5);
     font-style: normal;
     font-weight: 300;
+  }
+  a > h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: underline;
   }
   h5 {
     font-size: 1.25rem;
@@ -157,14 +198,23 @@ export const SocialSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10.875rem;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+  }
 
   section {
     display: flex;
     flex-direction: column;
     gap: 0.55rem;
-    max-width: 50%;
+    max-width: 45%;
 
+    @media only screen and (max-width: 1000px) {
+      max-width: 100%;
+      text-align: center;
+    }
     > h2 {
       font-weight: 600;
       font-size: 2rem;
@@ -188,6 +238,22 @@ export const SocialSection = styled.section`
       display: flex;
       justify-content: space-between;
       gap: 3.75rem;
+
+      @media only screen and (max-width: 550px) {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+    }
+  }
+
+  video {
+    max-width: 45%;
+    box-shadow: 8px -1px 300px -96px rgba(255, 255, 255, 1);
+    border-radius: 0.5rem;
+
+    @media only screen and (max-width: 900px) {
+      max-width: 100%;
     }
   }
 `

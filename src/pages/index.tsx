@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import Favicon from '@/assets/favicon.png'
 import {
   CakeIcon,
@@ -25,18 +27,28 @@ import {
   TopContent
 } from '@/styles/pages/Home'
 
+import AOS from 'aos'
+
 export default function Home() {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <BasicLayout>
       <SEO
-        title="Página inicial"
+        title="Home"
         description="Página criada por Vinícius Miranda"
         icon={Favicon.src}
         image={OgImage.src}
       />
       <Content>
         <TopContent>
-          <Left>
+          <Left
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-easing="ease-in-back"
+          >
             <h2>
               <i>Hello World</i>, tudo bem?
             </h2>
@@ -66,7 +78,11 @@ export default function Home() {
               </Button>
             </div>
           </Left>
-          <Right>
+          <Right
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-easing="ease-in"
+          >
             <ProfileLogoIcon />
           </Right>
         </TopContent>
@@ -99,7 +115,14 @@ export default function Home() {
             <Card>
               <GitHubIcon></GitHubIcon>
               <p>GitHub</p>
-              <h5>Ver</h5>
+              <a
+                href="https://github.com/ViniciusMirandaDev"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h5>Ver</h5>
+              </a>
+
               <BackgroundElipse />
               <BackgroundElipse />
             </Card>
@@ -107,7 +130,7 @@ export default function Home() {
           <span className="background-filter">as</span>
         </BasicInfos>
         <SocialSection>
-          <section>
+          <section data-aos="fade-left">
             <h2>Gostou de algo?</h2>
 
             <p>Caso sim, vamos conversar!</p>
@@ -145,6 +168,7 @@ export default function Home() {
               </a>
             </div>
           </section>
+          <video controls src={'/videos/main.mp4'} data-aos="fade-right" />
         </SocialSection>
       </Content>
     </BasicLayout>

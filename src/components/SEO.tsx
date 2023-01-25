@@ -21,7 +21,7 @@ export default function SEO({
   shouldIndexPage = true,
   themeColor = '#121214'
 }: SEOProps) {
-  const pageTitle = `${title} ${!shouldExcludeTitleSuffix && '| Template'}`
+  const pageTitle = `${title} ${!shouldExcludeTitleSuffix && '| VMB Developer'}`
   const pageImage = image
     ? image.startsWith('/')
       ? `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}${image}`
@@ -66,8 +66,8 @@ export default function SEO({
 
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@_viniciusbap" />
-      <meta name="twitter:creator" content="@_viniciusbap" />
+      <meta name="twitter:site" content="" />
+      <meta name="twitter:creator" content="" />
       <meta name="twitter:image" content={pageImage} />
       <meta name="twitter:image:src" content={pageImage} />
       <meta name="twitter:image:alt" content="Thumbnail" />
