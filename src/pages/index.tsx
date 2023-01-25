@@ -26,14 +26,7 @@ import {
   SocialSection,
   TopContent
 } from '@/styles/pages/Home'
-
-import AOS from 'aos'
-
 export default function Home() {
-  useEffect(() => {
-    AOS.init()
-  }, [])
-
   return (
     <BasicLayout>
       <SEO
@@ -130,7 +123,7 @@ export default function Home() {
           <span className="background-filter">as</span>
         </BasicInfos>
         <SocialSection>
-          <section data-aos="fade-left">
+          <section>
             <h2>Gostou de algo?</h2>
 
             <p>Caso sim, vamos conversar!</p>
@@ -168,7 +161,7 @@ export default function Home() {
               </a>
             </div>
           </section>
-          <video controls src={'/videos/main.mp4'} data-aos="fade-right" />
+          <video controls src={'/videos/main.mp4'} />
         </SocialSection>
       </Content>
     </BasicLayout>
